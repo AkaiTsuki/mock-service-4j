@@ -1,6 +1,5 @@
-[![Build Status](https://travis-ci.org/AkaiTsuki/mock-service-4j.svg?branch=master)](https://travis-ci.org/AkaiTsuki/mock-service-4j)
 
-# mock-service-4j
+# mock-service-4j [![Build Status](https://travis-ci.org/AkaiTsuki/mock-service-4j.svg?branch=master)](https://travis-ci.org/AkaiTsuki/mock-service-4j)
 Mockup Service for Testing. Traditional way for integration test among multiple micro-services require all dependency
 services deployed to server before running test. With mock service, we can config the service under test point to mock
 service server without dependency services setup.
