@@ -25,4 +25,15 @@
         <url-pattern>/admin/*</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>mockservice</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>mockservice</servlet-name>
+        <url-pattern>/service/*</url-pattern>
+    </servlet-mapping>
+
 </web-app>
