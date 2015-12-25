@@ -5,24 +5,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo.xsd">
 
 
-    <mongo:mongo host="mongo" port="27017">
-        <mongo:options connections-per-host="8"
-                       threads-allowed-to-block-for-connection-multiplier="4"
-                       connect-timeout="20000"
-                       max-wait-time="25000"
-                       auto-connect-retry="true"
-                       socket-keep-alive="true"
-                       socket-timeout="15000"
-                       slave-ok="true"
-                       write-number="1"
-                       write-timeout="0"
-                       write-fsync="true"/>
-    </mongo:mongo>
+    <mongo:mongo host="localhost" port="27017" />
 
     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
         <constructor-arg ref="mongo"/>
-        <constructor-arg value="bookstore"/>
+        <constructor-arg value="mockservice"/>
     </bean>
 
-    <mongo:repositories base-package="com.hazelnut.bookstore.repository" mongo-template-ref="mongoTemplate"/>
+    <mongo:repositories base-package="com.hazelnut" mongo-template-ref="mongoTemplate"/>
 </beans>
